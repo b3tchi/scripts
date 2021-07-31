@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-function node-nvm{
+function node-nvm {
 
   sudo apt-get install -y \
     curl
@@ -23,3 +23,5 @@ function node-nvm{
 function bitwarden {
   npm install -g @bitwarden/cli
 }
+
+

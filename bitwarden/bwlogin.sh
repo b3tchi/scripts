@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function bwlogin-prompt {
 
@@ -34,6 +34,7 @@ function bwlogin-prompt {
   echo "Enter your authenticator code:"
   read loginc
 
+  #Temporarly Export Login and Password
   export BW_EMAIL=$loginm
   export BW_MKEY=$loginp
 
@@ -66,3 +67,5 @@ function bwlogin {
   #TBD check when failiure
 
 }
+
+
