@@ -7,24 +7,24 @@ if [ ! -f $log ]; then
 fi
 
 #fish shell
-step='fish'
-if ! grep -q $step $log; then
-
-  #add repository
-  sudo apt-add-repository ppa:fish-shell/release-3
-  sudo apt update
-
-  sudo apt install fish
-
-  #change shell
-  chsh -s /usr/bin/fish
-
-  #get ohmyfish
-  sudo apt install curl
-  curl -L https://get.oh-my.fish | fish
-
-  echo $step >> $log
-fi
+# step='fish'
+# if ! grep -q $step $log; then
+#
+#   #add repository
+#   sudo apt-add-repository ppa:fish-shell/release-3
+#   sudo apt update
+#
+#   sudo apt install fish
+#
+#   #change shell
+#   chsh -s /usr/bin/fish
+#
+#   #get ohmyfish
+#   sudo apt install curl
+#   curl -L https://get.oh-my.fish | fish
+#
+#   echo $step >> $log
+# fi
 
 #zsh TBD
 step='zsh'
@@ -42,7 +42,7 @@ if ! grep -q $step $log; then
 fi
 
 #nodejs
-step='node'
+# step='node'
 # if ! grep -q $step $log; then
 #
 #   sudo apt remove --purge nodejs npm
@@ -75,28 +75,15 @@ step='node'
 step='node-nvm'
 if ! grep -q $step $log; then
 
+  node-nvm
 
-  # sudo apt remove --purge nodejs npm
-  #
-  # sudo apt clean
-  #
-  # sudo apt autoclean
-  #
-  # sudo apt install -f
-  #
-  # sudo apt autoremove
-  #
-  # sudo apt install curl
-  #
-  # # cd ~
-  #
-  # curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-  #
-  # sudo apt-get install -y nodejs
-  #
-  # curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  #
-  # sudo apt-get update && sudo apt-get install yarn
+  echo $step >> $log
+fi
+
+step='bitwarden'
+if ! grep -q $step $log; then
+
+  bitwarden
 
   echo $step >> $log
 fi
