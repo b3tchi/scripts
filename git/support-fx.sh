@@ -5,18 +5,18 @@ function registergitssh {
   title=$2
   sshkey=$3
 
-  # pat="e50df4d8a8f369a4885229a77a4bdb0efdec357a"
-  # title="DevVm_`date +%Y%m%d%H%M%S`"
-  # sshkey="`cat ~/.ssh/\"$Gfilegit\".pub`"
-
   echo $pat
   echo $title
   echo $sshkey
 
   # actual way (2020)
-  curl -h "authorization: token $pat" \
+  curl -H "authorization: token $pat" \
     --data "{\"title\":\"$title\",\"key\":\"$sshkey\"}" \
     https://api.github.com/user/keys
+
+  # in github token need prilige write:public_key
+  # https://docs.github.com/rest/reference/users#create-a-public-ssh-key-for-the-authenticated-user
+
 
   # old way till (2020) - using user
   # curl -u "b3tchi" \
@@ -31,9 +31,9 @@ function generatessh {
 
   keypath=~/.ssh/id_rsa_$sshsufx
 
-  echo $keypath
-
   ssh-keygen -t rsa -b 4096 -C $email -f $keypath
+
+  export SSH_PUB=$(cat $keypath)
 
 }
 

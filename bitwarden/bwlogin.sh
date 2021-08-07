@@ -20,7 +20,7 @@ function bwlogin-prompt {
 
   if [ -z "${BW_MKEY}" ]; then
     echo "Enter your masterkey:"
-    read loginp
+    read -s loginp
   else
 
     echo "Enter your masterkey [LastUsed]:"
