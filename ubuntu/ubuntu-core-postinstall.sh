@@ -1,5 +1,7 @@
 log=$0.log
 
+source ./install-lib.sh
+
 if [ ! -f $log ]; then
   echo "init" >> $log
 fi
@@ -39,62 +41,62 @@ if ! grep -q $step $log; then
   echo $step >> $log
 fi
 
-
 #nodejs
 step='node'
-if ! grep -q $step $log; then
-
-  sudo apt remove --purge nodejs npm
-
-  sudo apt clean
-
-  sudo apt autoclean
-
-  sudo apt install -f
-
-  sudo apt autoremove
-
-  sudo apt install curl
-
-  # cd ~
-
-  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-
-  sudo apt-get install -y nodejs
-
-  curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-
-  sudo apt-get update && sudo apt-get install yarn
-
-  echo $step >> $log
-fi
+# if ! grep -q $step $log; then
+#
+#   sudo apt remove --purge nodejs npm
+#
+#   sudo apt clean
+#
+#   sudo apt autoclean
+#
+#   sudo apt install -f
+#
+#   sudo apt autoremove
+#
+#   sudo apt install curl
+#
+#   # cd ~
+#
+#   curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+#
+#   sudo apt-get install -y nodejs
+#
+#   curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+#
+#   sudo apt-get update && sudo apt-get install yarn
+#
+#   echo $step >> $log
+# fi
 
 #nodejs-nvm
 
 step='node-nvm'
 if ! grep -q $step $log; then
 
-  sudo apt remove --purge nodejs npm
 
-  sudo apt clean
-
-  sudo apt autoclean
-
-  sudo apt install -f
-
-  sudo apt autoremove
-
-  sudo apt install curl
-
-  # cd ~
-
-  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-
-  sudo apt-get install -y nodejs
-
-  curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-
-  sudo apt-get update && sudo apt-get install yarn
+  # sudo apt remove --purge nodejs npm
+  #
+  # sudo apt clean
+  #
+  # sudo apt autoclean
+  #
+  # sudo apt install -f
+  #
+  # sudo apt autoremove
+  #
+  # sudo apt install curl
+  #
+  # # cd ~
+  #
+  # curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+  #
+  # sudo apt-get install -y nodejs
+  #
+  # curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  #
+  # sudo apt-get update && sudo apt-get install yarn
 
   echo $step >> $log
 fi
