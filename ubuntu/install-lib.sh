@@ -19,8 +19,28 @@ function node-nvm {
   npm install -g npm@latest
 
 }
-function nvim-lsp{
+
+
+function neovim-appimage {
+
+  #create application
+  sudo apt install curl
+
+  mkdir -p ~/Applications/
+  cd ~/Applications
+
+  #download neovim application image
+  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+  chmod u+x nvim.appimage
+  cd -
+}
+
+function neovim-lsp {
+
+  #python language server
   python3 -m pip install pyright
+
+  #bash language server
   npm install -g bash-language-server
 }
 

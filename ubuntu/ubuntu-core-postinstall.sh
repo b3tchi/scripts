@@ -1,6 +1,10 @@
+#!/bin/bash
+
+sdir=$(dirname "$0")
 log=$0.log
 
-source ./install-lib.sh
+
+source "$sdir/install-lib.sh"
 
 if [ ! -f $log ]; then
   echo "init" >> $log
@@ -150,6 +154,25 @@ if ! grep -q $step $log; then
 
   sudo npm install neovim -g
   pip3 install pynvim
+
+  echo $step >> $log
+fi
+
+#neovim-appimage
+step='neovim-appimage'
+if ! grep -q $step $log; then
+
+  neovim-appimage
+
+  echo $step >> $log
+fi
+
+#neovim-appimage
+step='neovim-lsp'
+if ! grep -q $step $log; then
+
+  $("$step")
+  # neovim-lsp
 
   echo $step >> $log
 fi

@@ -1,2 +1,9 @@
+#
 raspberry/pi_image/
+#and test items
 nvim/test_*
+#exclude any logs
+*.sh.log
+#exclude deb
+*.deb
+*.deb.*
