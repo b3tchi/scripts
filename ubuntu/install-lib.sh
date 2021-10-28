@@ -19,6 +19,10 @@ function node-nvm {
   npm install -g npm@latest
 
 }
+function nvim-lsp{
+  python3 -m pip install pyright
+  npm install -g bash-language-server
+}
 
 function bitwarden {
   npm install -g @bitwarden/cli
