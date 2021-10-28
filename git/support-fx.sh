@@ -37,33 +37,50 @@ function generatessh {
 
 }
 
-function namesshmachine {
+# function namesshmachine {
 
   #naming machnies table
 
+  # machine hosted
+    # az .... azure
+    # aw .... amazon workspace
+    # vm .... virtual machine
+    # sh .... shells
+    # pm .... physical machine
+    # wl .... windowssubsystemlinux
+
   #hwid
-    001
+    # 001
 
-  #virt
-    az
-    aws
-    vm
-    na
-  #os
-    w - windows
-    l - linux
-    a - android
-    t - termux
-    m - maemo
+  #os platform
+    # w .... windows
+    # l .... linux
+    # a .... android
+    # t .... termux
+    # m .... maemo
+
+  # os versinon
+    # uu .... ubuntu
+    # nn .... neon
+    # ey .... elementary
+    # mo .... manjaro
+
   #osid
-    01
+    # 01
+
   #user
-    b3tchi
-    lego
+    # jn
+    # lg
 
-  001awsw01lego
+  # az001luu01jn
+  # azure
+  # 001
+  # linux
+  # ubuntu
+  # 01
+  # jn
 
-}
+# }
 
 
 
