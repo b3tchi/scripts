@@ -21,6 +21,13 @@ function node-nvm {
 }
 
 
+function neovim-dependencies {
+
+  #telescope
+  sudo apt install fd
+
+}
+
 function neovim-appimage {
 
   #create application
@@ -42,6 +49,27 @@ function neovim-lsp {
 
   #bash language server
   npm install -g bash-language-server
+
+  #css,html,json,javascript language server
+  npm i -g vscode-langservers-extracted
+
+  #typescript
+  npm install -g typescript typescript-language
+
+  #docker language server
+  npm install -g dockerfile-language-server-nodejs
+
+  #vimi
+  npm install -g vim-language-server
+
+  #TODO lua
+
+  #TODO omnisharp
+
+  #Terafform
+  curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+
+
 }
 
 function bitwarden {

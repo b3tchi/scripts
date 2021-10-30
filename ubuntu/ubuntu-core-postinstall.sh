@@ -10,6 +10,19 @@ if [ ! -f $log ]; then
   echo "init" >> $log
 fi
 
+function deploy {
+
+  step=$1
+  log=$2
+
+  if ! grep -q $step $log; then
+
+    $("$step")
+    # neovim-lsp
+
+    echo $step >> $log
+  fi
+}
 #fish shell
 # step='fish'
 # if ! grep -q $step $log; then
@@ -166,6 +179,8 @@ if ! grep -q $step $log; then
 
   echo $step >> $log
 fi
+
+deploy 'neovim-dependencies'
 
 #neovim-appimage
 step='neovim-lsp'
