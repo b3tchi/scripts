@@ -19,7 +19,7 @@ npm install -g dockerfile-language-server-nodejs
 npm install -g vim-language-server
 
 #Terafform
-curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+# curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
 
 
 #TODO lua

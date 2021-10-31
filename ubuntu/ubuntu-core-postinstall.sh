@@ -181,8 +181,59 @@ if ! grep -q $step $log; then
 fi
 
 deploy 'neovim-dependencies'
-
 #neovim-appimage
+  #python language server
+  python3 -m pip install pyright
+
+  #bash language server
+  #python language server
+  python3 -m pip install pyright
+
+  #bash language server
+  npm install -g bash-language-server
+
+  #css,html,json,javascript language server
+  npm i -g vscode-langservers-extracted
+
+  #typescript
+  npm install -g typescript typescript-language
+
+  #docker language server
+  npm install -g dockerfile-language-server-nodejs
+
+  #vimi
+  npm install -g vim-language-server
+
+  #TODO lua
+
+  #TODO omnisharp
+
+  #Terafform
+  curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+
+
+  npm install -g bash-language-server
+
+  #css,html,json,javascript language server
+  npm i -g vscode-langservers-extracted
+
+  #typescript
+  npm install -g typescript typescript-language
+
+  #docker language server
+  npm install -g dockerfile-language-server-nodejs
+
+  #vimi
+  npm install -g vim-language-server
+
+  #TODO lua
+
+  #TODO omnisharp
+
+  #Terafform
+  curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+
+
 step='neovim-lsp'
 if ! grep -q $step $log; then
 

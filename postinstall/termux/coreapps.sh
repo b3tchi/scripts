@@ -1,4 +1,7 @@
 #!/bin/bash
 
+pkg update
+
 pkg install -y \
-  neovim \
+  nnn \
+  tmux \
