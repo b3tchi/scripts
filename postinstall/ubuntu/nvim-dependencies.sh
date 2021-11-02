@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#fd -telescope
+#fd-find -telescope
 sudo apt install -y \
   fzf \
-  fd \
+  fd-find \
   ripgrep \

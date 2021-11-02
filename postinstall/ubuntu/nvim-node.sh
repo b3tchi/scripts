@@ -14,4 +14,4 @@ nvm install lts/fermium
 #Update NPM
 npm install -g npm@latest
 
-sudo npm install -g neovim
+npm install -g neovim

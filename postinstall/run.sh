@@ -73,4 +73,5 @@ deploy 'nvim'
 deploy 'nvim-dependencies'
 deploy 'nvim-node'
 deploy 'nvim-python'
-deploy 'nvim-lsp'
+deploy 'powershell'
+# deploy 'nvim-lsp' will used neovim plugin for auto install
