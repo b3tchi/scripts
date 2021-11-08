@@ -7,3 +7,4 @@ curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /et
 sudo apt-get update
 
 sudo apt-get install mssql-tools unixodbc-dev
+
