@@ -5,3 +5,4 @@ pkg update
 pkg install -y \
   nnn \
   tmux \
+  libqrencode \

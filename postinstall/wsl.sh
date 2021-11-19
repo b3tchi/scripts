@@ -5,8 +5,8 @@ log=$0.log
 system='ubuntu'
 
 if [[ $IS_ANDROID -eq 1 ]]; then
-  echo switching to termux
-  system='termux'
+  echo not possible in termux
+  exit 0
 fi
 
 #load deploy function
@@ -16,15 +16,9 @@ source "$sdir/install-fxs.sh"
 chmod +x ${sdir}/${system}/*.sh
 
 deploy 'test'
-deploy 'zsh'
-deploy 'coreapps'
-deploy 'bat'
-deploy 'lazygit'
-deploy 'bitwarden'
-deploy 'nvim'
-deploy 'nvim-dependencies'
-deploy 'nvim-node'
-deploy 'nvim-python'
 deploy 'powershell'
-deploy 'syncthing'
+deploy 'dotnet'
+deploy 'sqlcmd'
+
 # deploy 'nvim-lsp' will used neovim plugin for auto install
+
