@@ -19,6 +19,5 @@ deploy 'test'
 deploy 'powershell'
 deploy 'dotnet'
 deploy 'sqlcmd'
-
-# deploy 'nvim-lsp' will used neovim plugin for auto install
+deploy 'roundhouse'
 
