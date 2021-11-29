@@ -6,3 +6,4 @@ sudo apt install -y \
   nnn \
   tmux \
   qrencode \
+  unzip \

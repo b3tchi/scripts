@@ -4,7 +4,6 @@ sudo apt install -y \
   neovim \
   curl \
 
-
 mkdir -p ~/Applications/
 cd ~/Applications
 
