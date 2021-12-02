@@ -16,15 +16,16 @@ source "$sdir/install-fxs.sh"
 chmod +x ${sdir}/${system}/*.sh
 
 deploy 'test'
-deploy 'zsh'
 deploy 'coreapps'
+deploy 'zsh'
 deploy 'bat'
 deploy 'lazygit'
-deploy 'bitwarden'
 deploy 'nvim'
 deploy 'nvim-dependencies'
 deploy 'nvim-node'
+deploy 'nvim-lsp'
 deploy 'nvim-python'
+deploy 'bitwarden'
 deploy 'powershell'
 deploy 'syncthing'
 # deploy 'nvim-lsp' will used neovim plugin for auto install

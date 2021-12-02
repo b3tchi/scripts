@@ -19,5 +19,6 @@ deploy 'test'
 deploy 'powershell'
 deploy 'dotnet'
 deploy 'sqlcmd'
+deploy 'azcli'
 deploy 'roundhouse'
 
