@@ -21,9 +21,10 @@ fi
 function deploy {
 
   step=$1
+  steprgx="^${step}$"
   # log=$2
 
-  if ! grep -q $step $log; then
+  if ! grep -q $steprgx $log; then
 
     file=${sdir}/${system}/${step}.sh
 
