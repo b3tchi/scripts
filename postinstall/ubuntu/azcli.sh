@@ -17,3 +17,5 @@ echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO 
 
 sudo apt-get update
 sudo apt-get install azure-cli
+
+az extension add --name azure-devops
