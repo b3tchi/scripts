@@ -6,7 +6,7 @@ wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.
 #install Keys
 sudo dpkg -i packages-microsoft-prod.deb
 
-#delete package
+#delete package file
 rm packages-microsoft-prod.deb
 
 #update repository

@@ -28,4 +28,5 @@ deploy 'nvim-python'
 deploy 'bitwarden'
 deploy 'powershell'
 deploy 'syncthing'
+deploy 'docker'
 # deploy 'nvim-lsp' will used neovim plugin for auto install
