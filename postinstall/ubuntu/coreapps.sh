@@ -7,3 +7,4 @@ sudo apt install -y \
   tmux \
   qrencode \
   unzip \
+  translate-shell \
