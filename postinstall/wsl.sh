@@ -21,4 +21,5 @@ deploy 'dotnet'
 deploy 'sqlcmd'
 deploy 'azcli'
 deploy 'roundhouse'
+deploy 'terraform'
 
