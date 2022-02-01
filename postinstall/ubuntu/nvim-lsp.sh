@@ -15,16 +15,18 @@ npm install -g typescript typescript-language-server
 #docker language server
 npm install -g dockerfile-language-server-nodejs
 
-#vims
+#vimls
 npm install -g vim-language-server
 
 #Terafform
 curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
 
+#Markdown - wiki
+npm install -g remark remark-language-server
 
-#TODO lua lsp-install
-#TODO omnisharp lsp-install
-#TODO powershell using coc-powershell
+#lua via lsp-install
+#C omnisharp via lsp-install
+#powershell via coc-powershell
 
 #TODO sql
 #TODO rust
