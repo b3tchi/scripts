@@ -10,7 +10,9 @@ sudo apt-get install -y \
     curl \
     gnupg \
     lsb-release \
-    software-properties-common
+    software-properties-common \
+    python3 \
+    python3-pip \
 
 #adding repo
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -19,6 +21,9 @@ apt-cache policy docker-ce
 
 #installing docker
 sudo apt install -y docker-ce docker-ce-cli containerd.io
+
+#installing docker-compose using pip
+python3 -m pip install docker-compose
 # sudo systemctl status docker
 
 #ensure user group is there
