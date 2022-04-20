@@ -35,3 +35,23 @@ chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
 
 cd -
+
+pip3 install pynvim
+
+npminstalorupdate(){
+  pkg=$1
+
+  REPO_VERSION=$(npm view "$pkg" version)
+  LOCAL_VERSION=$(npm list -g "$pkg" | grep -Po "$pkg@\K[0-9.]+")
+  NEWER_VERSION=$(printf "${REPO_VERSION}\n${LOCAL_VERSION}" | sort -rV | head -n1)
+
+  if [[ "$NEWER_VERSION" == "$LOCAL_VERSION" ]]; then
+    echo $pkg same version skipping
+    return
+  else
+    echo "updating ${pkg} $LOCAL_VERSION >>> $NEWER_VERSION"
+    npm install -g "${pkg}@${NEWER_VERSION}"
+  fi
+
+}
+npminstalorupdate neovim

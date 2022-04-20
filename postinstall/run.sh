@@ -15,10 +15,10 @@ source "$sdir/install-fxs.sh"
 #make executable all scripts
 # chmod +x ${sdir}/${system}/*.sh
 
-onetimers=$(ls ${sdir}/${system}/onetime/*.sh)
+onetimers=$(ls ${sdir}/${system}/onetime/*.sh | sort)
 
 for val in $onetimers; do
-  echo $(basename $val | sed -e 's/[.]sh$//')
+  echo $(basename $val | sed -e 's/[.]sh$//' | sed -e 's/^[0-9]*_//')
 done
 
 deploy 'test' 'onetime'

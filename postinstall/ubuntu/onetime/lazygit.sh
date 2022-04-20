@@ -1,8 +1,4 @@
 #!/bin/bash
-# PPA was deprecated
-# sudo add-apt-repository ppa:lazygit-team/daily
-# sudo apt-get update
-# sudo apt-get install lazygit
 
 # Download of the binary file
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
