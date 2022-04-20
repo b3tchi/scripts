@@ -17,10 +17,14 @@ source "$sdir/install-fxs.sh"
 
 onetimers=$(ls ${sdir}/${system}/onetime/*.sh)
 
-echo -e $onetimers
+for val in $onetimers; do
+  echo $(basename $val | sed -e 's/[.]sh$//')
+done
 
 deploy 'test' 'onetime'
+
 exit
+
 deploy 'coreapps'
 deploy 'zsh'
 deploy 'bat'

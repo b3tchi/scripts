@@ -32,14 +32,11 @@ function deploy {
     fi
   fi
 
+  file=${sdir}/${system}/${type}/${step}.sh
 
-  # if ! grep -q $steprgx $log; then
+  chmod +x $file
 
-    file=${sdir}/${system}/${type}/${step}.sh
-
-    chmod +x $file
-
-    if [[ -e $file ]]; then
+  if [[ -e $file ]]; then
 
       #run script
       # $($file)
@@ -54,9 +51,7 @@ function deploy {
 
     else
       echo -e "$WW - $step ... not found - skipping"
-    fi
-  # else
-  #
-  # fi
+  fi
+
 }
 
