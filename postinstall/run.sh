@@ -15,13 +15,6 @@ source "$sdir/install-fxs.sh"
 #make executable all scripts
 # chmod +x ${sdir}/${system}/*.sh
 
-anytimers=$(ls ${sdir}/${system}/anytime/*.sh | sort)
-
-for val in $anytimers; do
-  item=$(basename $val | sed -e 's/[.]sh$//' | sed -e 's/^[0-9]*_//')
-  deploy $item 'anytime'
-done
-
 onetimers=$(ls ${sdir}/${system}/onetime/*.sh | sort)
 
 for val in $onetimers; do
@@ -29,6 +22,12 @@ for val in $onetimers; do
   deploy $item 'onetime'
 done
 
+anytimers=$(ls ${sdir}/${system}/anytime/*.sh | sort)
+
+for val in $anytimers; do
+  item=$(basename $val | sed -e 's/[.]sh$//' | sed -e 's/^[0-9]*_//')
+  deploy $item 'anytime'
+done
 
 exit
 
