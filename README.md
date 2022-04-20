@@ -5,6 +5,10 @@ all purpose
 ./postinstall/run.sh
 ```
 
+```bash
+./postinstall/ubuntu/nvim.sh
+```
+
 .NET and azure
 ```bash
 ./postinstall/wsl.sh
