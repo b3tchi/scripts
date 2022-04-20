@@ -13,5 +13,5 @@ nvm install lts/fermium
 
 #Update NPM
 npm install -g npm@latest
-
+npm install -g yarn
 npm install -g neovim
