@@ -7,6 +7,10 @@ all purpose
 log is kept in
 ./postinstall/run.sh.log
 
+```bash
+./postinstall/ubuntu/nvim.sh
+```
+
 .NET and azure
 ```bash
 ./postinstall/wsl.sh

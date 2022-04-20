@@ -13,9 +13,14 @@ fi
 source "$sdir/install-fxs.sh"
 
 #make executable all scripts
-chmod +x ${sdir}/${system}/*.sh
+# chmod +x ${sdir}/${system}/*.sh
 
-deploy 'test'
+onetimers=$(ls ${sdir}/${system}/onetime/*.sh)
+
+echo -e $onetimers
+
+deploy 'test' 'onetime'
+exit
 deploy 'coreapps'
 deploy 'zsh'
 deploy 'bat'

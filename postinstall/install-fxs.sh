@@ -21,12 +21,23 @@ fi
 function deploy {
 
   step=$1
-  steprgx="^${step}$"
+  type=$2
   # log=$2
 
-  if ! grep -q $steprgx $log; then
+  if [[ $type == "onetime" ]]; then
+    steprgx="^${step}$"
+    if grep -q $steprgx $log; then
+      echo -e "$II - $step ... already installed - skipping"
+      return
+    fi
+  fi
 
-    file=${sdir}/${system}/${step}.sh
+
+  # if ! grep -q $steprgx $log; then
+
+    file=${sdir}/${system}/${type}/${step}.sh
+
+    chmod +x $file
 
     if [[ -e $file ]]; then
 
@@ -44,9 +55,8 @@ function deploy {
     else
       echo -e "$WW - $step ... not found - skipping"
     fi
-  else
-
-    echo -e "$II - $step ... already installed - skipping"
-  fi
+  # else
+  #
+  # fi
 }
 
