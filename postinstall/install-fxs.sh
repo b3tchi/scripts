@@ -18,10 +18,11 @@ if [ ! -f $log ]; then
   touch $log
 fi
 
-function deploy {
+deploy() {
+  file=$1
 
-  step=$1
-  type=$2
+  step=$(basename $file | sed -e 's/[.]sh$//' | sed -e 's/^[0-9]*_//')
+  type=$(basename $(dirname $file))
   # log=$2
 
   if [[ $type == "onetime" ]]; then
@@ -32,7 +33,7 @@ function deploy {
     fi
   fi
 
-  file=${sdir}/${system}/${type}/${step}.sh
+  # file=${sdir}/${system}/${type}/${step}.sh
 
   chmod +x $file
 
