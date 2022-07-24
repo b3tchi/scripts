@@ -1,4 +1,9 @@
 #general environ setup clone script
+sudo apt install ghcli #install client
+
+#git repositories repos
+mkdir ~/repos/b3tchi
+#generate ssh
 
 #clone scripts
 mkdir ~/scripts
@@ -9,6 +14,13 @@ git clone https://github.com/b3tchi/scripts ~/scripts
 mkdir ~/dotfiles
 
 git clone https://github.com/b3tchi/dotfiles ~/dotfiles
+
+#work repos
+mkdir ~/repos/LEGO
+#generate ssh
+
+mkdir ~/repos/jan-becka
+#generate ssh
 
 #TBD
 #setup install node for bitwarden

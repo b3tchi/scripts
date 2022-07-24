@@ -20,7 +20,6 @@ fi
 
 if [[ $ACTION > 0 ]];then
 
-
   if [[ $ACTION == 1 ]];then
     sudo rm -rf /usr/local/go
   fi

@@ -18,7 +18,6 @@ else
 fi
 
 # If we use 0.20.0:
-# VERSION='0.20.0'
 if [[ $ACTION > 0 ]];then
   if [[ $ACTION == 1 ]];then
     sudo apt-get remove bat
